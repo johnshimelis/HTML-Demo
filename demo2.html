@@ -1,18 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Sage Training Institution - Course Registration</title>
+
+
+  <link rel="stylesheet" href="style.css">
+
+ 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: gray;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #444;
+      color: white;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 20px;
+      background-color: white;
+      margin: 20px;
+      border-radius: 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+
+    form input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    section#register input[type="radio"] {
+      width: auto;
+    }
+     section#register input[type="checkbox"] {
+      width: auto;
+      margin-left: 0px;
+    }
+   
+
+    section#resources img:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Page Header -->
+
   <header>
-    <h1>Sage Training Institution</h1>
-    <p>Empowering you with modern web development skills!</p>
+    <h1 style="color: teal; font-size: 90px;">Sage Training Institution</h1>
+    <p style="font-style: italic;">Empowering you with modern web development skills!</p>
   </header>
 
-  <!-- Navigation Menu -->
+
   <nav>
     <h2>Menu</h2>
     <ul>
@@ -25,10 +119,9 @@
     </ul>
   </nav>
 
-  <!-- Section: Course Offerings -->
+
   <section id="courses">
     <h2>Our Courses</h2>
-
     <ul>
       <li>HTML & CSS Basics</li>
       <li>JavaScript Fundamentals</li>
@@ -43,15 +136,13 @@
       <dd>Bring interactivity to your web pages.</dd>
     </dl>
 
-    <!-- Abbreviation and Semantic Text -->
     <p>All courses follow the latest <abbr title="World Wide Web Consortium">W3C</abbr> standards and include practical labs.</p>
   </section>
 
-  <!-- Section: Timetable with Tables -->
+
   <section id="schedule">
     <h2>Weekly Schedule</h2>
-
-    <table border="1">
+    <table>
       <tr>
         <th rowspan="2">Day</th>
         <th colspan="2">Sessions</th>
@@ -70,21 +161,16 @@
         <td colspan="2">JavaScript Deep Dive</td>
       </tr>
     </table>
-
-    <!-- Time and Mark Example -->
     <p>The next batch starts on <time datetime="2025-06-01">June 1, 2025</time>. <mark>Early registration ends soon!</mark></p>
   </section>
 
-  <!-- Section: Learning Methods -->
+ 
   <section id="method">
     <h2>How You’ll Learn</h2>
-
     <div>
       <p>At Sage Training Institution, our approach is <strong>practical</strong> and <em>step-by-step</em>.</p>
     </div>
-
     <p>Start <span>today</span> and learn by doing!</p>
-
     <h3>Learning Steps</h3>
     <ol>
       <li>Watch the tutorial videos</li>
@@ -93,21 +179,17 @@
       <li>Receive feedback from instructors</li>
       <li>Build your final portfolio</li>
     </ol>
-
-    <!-- Code, Kbd, and Samp Example -->
     <p>Example code: <code>document.querySelector('#submit').click();</code></p>
     <p>To refresh the page, press <kbd>Ctrl</kbd> + <kbd>R</kbd></p>
     <p>Sample output: <samp>Registration successful!</samp></p>
   </section>
 
-  <!-- Section: Form Registration -->
+
   <section id="register">
     <h2>Register for a Course</h2>
-
     <form action="#" method="post">
       <fieldset>
         <legend>Personal Information</legend>
-
         <label for="fullname">Full Name:</label><br>
         <input type="text" id="fullname" name="fullname"><br><br>
 
@@ -123,7 +205,6 @@
 
       <fieldset>
         <legend>Course Selection</legend>
-
         <p>Which course(s) do you want to enroll in?</p>
         <input type="checkbox" id="course1" name="courses" value="htmlcss">
         <label for="course1">HTML & CSS</label>
@@ -145,32 +226,24 @@
     </form>
   </section>
 
-  <!-- Section: Resources (Advanced HTML additions) -->
+  <!-- Section: Resources -->
   <section id="resources">
     <h2>Extra Learning Resources</h2>
-
-    <!-- Details and Summary -->
     <details>
       <summary>What should I bring to class?</summary>
       <p>You’ll need a laptop and stable internet connection. Notes and materials will be provided.</p>
     </details>
-
-    <!-- Progress and Meter -->
     <p>Registration progress: <progress value="70" max="100"></progress></p>
     <p>Seats Filled: <meter value="0.7">70%</meter></p>
-
-    <!-- Figure and Figcaption -->
     <figure>
       <img src="https://via.placeholder.com/300x150" alt="Web development class">
       <figcaption>Live web development session at our main campus</figcaption>
     </figure>
-
-    <!-- Iframe -->
     <p>Watch our introduction video:</p>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/UB1O30fR-EE" title="Intro to HTML" frameborder="0" allowfullscreen></iframe>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Section: Contact -->
   <section id="contact">
     <h2>Contact Us</h2>
     <p>Email: <a href="mailto:info@sage.edu.et">info@sage.edu.et</a></p>
