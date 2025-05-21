@@ -1,202 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bootstrap 5 Complete Demo</title>
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sage Training Institute</title>
+
+  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+  .custom-carousel {
+    max-width: 1000px; /* Wider carousel */
+    height: 400px;     /* Shorter height */
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+</style>
+
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">BootstrapDemo</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-        </ul>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="#">Sage Training</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- Hero Section with Alert -->
+<div class="container mt-4">
+  <div class="alert alert-success text-center" role="alert">
+    🎉 New courses available this month! Enroll now and get a <strong class="badge bg-warning text-dark">20% discount</strong>!
+  </div>
+</div>
+
+<!-- Carousel with Custom Width & Height -->
+<div class="container my-4">
+  <div id="heroCarousel" class="carousel slide mx-auto custom-carousel" data-bs-ride="carousel">
+    <div class="carousel-inner text-center">
+      <div class="carousel-item active">
+        <img src="web.jpg" class="carousel-image rounded" alt="Web Dev">
+      </div>
+      <div class="carousel-item">
+        <img src="ai.png" class="carousel-image rounded" alt="AI ML">
+      </div>
+      <div class="carousel-item">
+        <img src="excel.jpg" class="carousel-image rounded" alt="Excel">
       </div>
     </div>
-  </nav>
-
-  <!-- Carousel -->
-  <div id="mainCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active"><img src="https://via.placeholder.com/1200x300" class="d-block w-100" alt="..."></div>
-      <div class="carousel-item"><img src="https://via.placeholder.com/1200x300/555" class="d-block w-100" alt="..."></div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
       <span class="carousel-control-next-icon"></span>
     </button>
   </div>
+</div>
 
-  <!-- Containers -->
-  <div class="container mb-5">
-    <h2>Container</h2>
-    <p>This is inside a standard container.</p>
+
+
+<!-- Courses Table Section -->
+<section id="courses-table" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Courses Table</h2>
+    <table class="table table-bordered table-striped table-hover">
+      <thead>
+        <tr class="table-dark">
+          <th scope="col">#</th>
+          <th scope="col">Course Name</th>
+          <th scope="col">Duration</th>
+          <th scope="col">Instructor</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-success">
+          <th scope="row">1</th>
+          <td>Full Stack Web Development</td>
+          <td>3 months</td>
+          <td>John Doe</td>
+          <td>$499</td>
+        </tr>
+        <tr class="table-warning">
+          <th scope="row">2</th>
+          <td>AI & Machine Learning</td>
+          <td>4 months</td>
+          <td>Jane Smith</td>
+          <td>$699</td>
+        </tr>
+        <tr class="table-danger">
+          <th scope="row">3</th>
+          <td>Advanced Excel for Professionals</td>
+          <td>2 months</td>
+          <td>Mark Johnson</td>
+          <td>$199</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <div class="container-fluid bg-light p-3 mb-5">
-    <h2>Container-fluid</h2>
-    <p>This is inside a fluid container (full width).</p>
-  </div>
+</section>
 
-  <!-- Buttons -->
-  <div class="container my-5">
-    <h1 class="text-center mb-4">Bootstrap 5 Components and Utilities</h1>
-    <section class="mb-5">
-      <h2>Buttons</h2>
-      <div class="d-flex flex-wrap gap-2">
-        <button class="btn btn-primary">Primary</button>
-        <button class="btn btn-secondary">Secondary</button>
-        <button class="btn btn-success">Success</button>
-        <button class="btn btn-danger">Danger</button>
-        <button class="btn btn-warning">Warning</button>
-        <button class="btn btn-info">Info</button>
-        <button class="btn btn-light">Light</button>
-        <button class="btn btn-dark">Dark</button>
-        <button class="btn btn-link">Link</button>
-      </div>
-    </section>
-
-    <!-- Alerts -->
-    <section class="mb-5">
-      <h2>Alerts</h2>
-      <div class="alert alert-primary">Primary Alert</div>
-      <div class="alert alert-secondary">Secondary Alert</div>
-      <div class="alert alert-success">Success Alert</div>
-      <div class="alert alert-danger">Danger Alert</div>
-      <div class="alert alert-warning">Warning Alert</div>
-      <div class="alert alert-info">Info Alert</div>
-      <div class="alert alert-light">Light Alert</div>
-      <div class="alert alert-dark">Dark Alert</div>
-    </section>
-
-    <!-- Forms -->
-    <section class="mb-5">
-      <h2>Forms</h2>
-      <form>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" id="email" class="form-control">
-        </div>
-        <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input type="password" id="password" class="form-control">
-        </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="check">
-          <label class="form-check-label" for="check">Check me</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-    </section>
-
-    <!-- Tables -->
-    <section class="mb-5">
-      <h2>Tables</h2>
-      <table class="table table-striped table-hover table-bordered">
-        <thead class="table-dark">
-          <tr><th>#</th><th>First</th><th>Last</th><th>Handle</th></tr>
-        </thead>
-        <tbody>
-          <tr><th>1</th><td>Mark</td><td>Otto</td><td>@mdo</td></tr>
-          <tr><th>2</th><td>Jacob</td><td>Thornton</td><td>@fat</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- Grid -->
-    <section class="mb-5">
-      <h2>Grid System</h2>
-      <div class="row">
-        <div class="col-md-4 bg-primary text-white p-3">col-md-4</div>
-        <div class="col-md-4 bg-secondary text-white p-3">col-md-4</div>
-        <div class="col-md-4 bg-success text-white p-3">col-md-4</div>
-      </div>
-    </section>
-
-    <!-- Cards -->
-    <section class="mb-5">
-      <h2>Cards</h2>
-      <div class="card" style="width: 18rem;">
-        <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Bootstrap Card</h5>
-          <p class="card-text">This is an example of a Bootstrap card component.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+<!-- Courses Section -->
+<section id="courses" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Popular Courses</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="web.jpg" class="card-img-top rounded" alt="Web Dev">
+          <div class="card-body">
+            <h5 class="card-title">Full Stack Web Development <span class="badge bg-info">New</span></h5>
+            <p class="card-text">Learn HTML, CSS, JavaScript, and modern frameworks like React and Node.js.</p>
+            <button class="btn btn-primary"><i class="bi bi-pencil-square"></i> Enroll</button>
+          </div>
         </div>
       </div>
-    </section>
-
-    <!-- Progress and Spinner -->
-    <section class="mb-5">
-      <h2>Progress & Spinners</h2>
-      <div class="progress mb-3">
-        <div class="progress-bar" style="width: 50%;">50%</div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="ai.png" class="card-img-top rounded" alt="AI ML">
+          <div class="card-body">
+            <h5 class="card-title">AI & Machine Learning <span class="badge bg-success">Top Rated</span></h5>
+            <p class="card-text">Master artificial intelligence concepts and build machine learning models.</p>
+            <button class="btn btn-success"><i class="bi bi-robot"></i> Enroll</button>
+          </div>
+        </div>
       </div>
-      <div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
-    </section>
-
-    <!-- Badges -->
-    <section class="mb-5">
-      <h2>Badges</h2>
-      <h3>Example heading <span class="badge bg-secondary">New</span></h3>
-    </section>
-
-    <!-- Collapse -->
-    <section class="mb-5">
-      <h2>Collapse</h2>
-      <p>
-        <a class="btn btn-info" data-bs-toggle="collapse" href="#collapseExample">Toggle Info</a>
-      </p>
-      <div class="collapse" id="collapseExample">
-        <div class="card card-body">This is some collapsible content.</div>
-      </div>
-    </section>
-
-    <!-- Modal Trigger -->
-    <section class="mb-5">
-      <h2>Modal</h2>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Launch demo modal</button>
-    </section>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header"><h5 class="modal-title">Modal Title</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
-          <div class="modal-body">This is a Bootstrap modal.</div>
-          <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="excel.jpg" class="card-img-top rounded" alt="Excel">
+          <div class="card-body">
+            <h5 class="card-title">Advanced Excel for Professionals <span class="badge bg-danger">Hot</span></h5>
+            <p class="card-text">Boost your productivity with Excel formulas, charts, and automation.</p>
+            <button class="btn btn-danger"><i class="bi bi-bar-chart"></i> Enroll</button>
+          </div>
         </div>
       </div>
     </div>
-
-    <!-- Utility Classes -->
-    <section class="mb-5">
-      <h2>Utility Classes</h2>
-      <div class="p-3 mb-2 bg-primary text-white">.bg-primary .text-white</div>
-      <div class="p-3 mb-2 bg-light text-dark">.bg-light .text-dark</div>
-      <div class="border p-3 m-2">.border .p-3 .m-2</div>
-      <div class="shadow p-3">.shadow</div>
-      <div class="rounded p-3 bg-secondary text-white">.rounded</div>
-    </section>
   </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">&copy; 2025 Bootstrap Complete Demo. All rights reserved.</p>
-  </footer>
+<!-- Contact Form -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Your full name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" id="email" class="form-control" placeholder="name@example.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="course" class="form-label">Interested Course</label>
+            <select class="form-select" id="course">
+              <option selected>Select a course</option>
+              <option>Web Development</option>
+              <option>AI & Machine Learning</option>
+              <option>Excel Mastery</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" class="form-control" rows="4" placeholder="Your message..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100"><i class="bi bi-send"></i> Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <p class="mb-0">&copy; 2025 Sage Training Institute. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
